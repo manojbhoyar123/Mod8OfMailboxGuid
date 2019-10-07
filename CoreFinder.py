@@ -1,26 +1,29 @@
-#replace - by X
-#find ascii value of every character
-#sum of ascii values
-#mod 8
 import math
+guid = input("Enter mbx guid\n")
+def ToUpperCase(guid) -> object:
+    guidListUpper=[]
+    for g in guid:
+        guidListUpper.append(g.upper())
+    return guidListUpper
+print("uppercase",ToUpperCase(guid))
+# to add x instead of - in guid
+def GuidAddX(guidListUpper):
+    guidlistwithx=[]
+    guidlistwithx=ToUpperCase(guid)
+    guidlistwithX=guidListUpper.replace("-","X")
+    return guidlistwithX
+print("newguids:-",GuidAddX(guidListUpper))
 
-guid=input("Enter mbx guid\n")
-
-def GuidAddX(guid):
-    guidlist=[]
-    guidlist=guid
-    #print("guidlist",guidlist)
-    guidlistNew=guidlist.replace("-","x")
-    return guidlistNew
-print("newguids:-",GuidAddX(guid))
-
-def GetAscii(guid):
-    arraylistNew = []
+# to get ascii value of each character of guid list
+def GetAscii(guidlistwithX):
+    arraylistAscii = []
     for g in guid:
             #To get ascii value
-        ask=(ord(g))
+        askvl=(ord(g))
             #To append in arrayList
-        arraylistNew.append(ask)
-    return arraylistNew
-print(GetAscii(guid))
+        arraylistAscii.append(askvl)
+    return arraylistAscii
+print(GetAscii(guidlistwithX))
+#  to convert guidlist to upper characters
+
 
