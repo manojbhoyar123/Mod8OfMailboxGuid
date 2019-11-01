@@ -1,16 +1,17 @@
+"""
 import math
 guid = input("Enter mbx guid\n")
 def ToUpperCase(guid) -> object:
-    guidListUpper=[]
+    guidListUpper = []
     for g in guid:
         guidListUpper.append(g.upper())
     return guidListUpper
 print("uppercase",ToUpperCase(guid))
 # to add x instead of - in guid
 def GuidAddX(guidListUpper):
-    guidlistwithx=[]
-    guidlistwithx=ToUpperCase(guid)
-    guidlistwithX=guidListUpper.replace("-","X")
+    guidlistwithx = []
+    guidlistwithx = ToUpperCase(guid)
+    guidlistwithX = guidListUpper.replace("-","X")
     return guidlistwithX
 print("newguids:-",GuidAddX(guidListUpper))
 
@@ -25,5 +26,4 @@ def GetAscii(guidlistwithX):
     return arraylistAscii
 print(GetAscii(guidlistwithX))
 #  to convert guidlist to upper characters
-
-
+"""
